@@ -23,7 +23,7 @@ I used macports to do this. I just wanted to repeat my steps for future referenc
     sudo port install mariadb-server
     # to start the db server immediately upon reboot:
     sudo launchctl load -w /Library/LaunchDaemons/org.macports.mariadb-server.plist
-    /opt/local/lib/mariadb/bin/mysqladmin -u root password 123456
+    /opt/local/lib/mariadb/bin/mysqladmin -u root password 'password'
 
 To connect via third party apps such as sequel pro or through sequelize, I was unable to connect through 127.0.0.1.
 However, because mariadb has been installed locally, can use the socket at `/opt/local/var/run/mariadb/mysqld.sock`
