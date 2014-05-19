@@ -10,13 +10,13 @@ the json api used for the canjs models.
 
 ###Installation and Usage
 - First, git clone this repository.
-- Install MariaDB as shown below. If you want to use a different db, you'll still have to figure out how to get the
+- Install MariaDB as shown below (for a mac). If you want to use a different db, you'll still have to figure out how to get the
 process started and the connection options required for third-party apps. You'll also have to install the node
 database adapter, which will allow sequelize to talk to your database. For example to use mariadb, I installed mariasql.
 - Rename config/config_sanitized.js to config/config.js and set the options to use your new database connection.
 - Run the migrations to initialize the database schema
 
-###Installing MariaDB
+###Installing MariaDB on a Mac
 
 I used macports to do this. I just wanted to repeat my steps for future reference:
 
@@ -25,7 +25,7 @@ I used macports to do this. I just wanted to repeat my steps for future referenc
     sudo launchctl load -w /Library/LaunchDaemons/org.macports.mariadb-server.plist
     /opt/local/lib/mariadb/bin/mysqladmin -u root password 123456
 
-To connect via third party apps such as sequel pro or through sequelize, I as unable to connect through 127.0.0.1.
+To connect via third party apps such as sequel pro or through sequelize, I was unable to connect through 127.0.0.1.
 However, because mariadb has been installed locally, can use the socket at `/opt/local/var/run/mariadb/mysqld.sock`
 If you still see errors, then try editing the configuration file to include:
 
