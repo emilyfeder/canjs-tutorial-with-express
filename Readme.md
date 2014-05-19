@@ -15,6 +15,9 @@ process started and the connection options required for third-party apps. You'll
 database adapter, which will allow sequelize to talk to your database. For example to use mariadb, I installed mariasql.
 - Rename config/config_sanitized.js to config/config.js and set the options to use your new database connection.
 - Run the migrations to initialize the database schema
+- Start the server:
+    node server.js
+- Point your browser to localhost:4000/
 
 ###Installing MariaDB on a Mac
 
