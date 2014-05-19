@@ -22,7 +22,6 @@ module.exports = Routes = {
 				})
 			},
 			update: function(request, response) {
-				console.log(request.params, request.body);
 				models.Todos.update(request.body, {id : request.params.id}).success(function(numRows){
 					response.json({});
 				});
